@@ -79,6 +79,45 @@ for (let i of ninjaTurtles) {
 ////////////////////////////////
 // Methods, Revisited
 ////////////////////////////////
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+
+for(let i=0; i<favMovies.length;i++){
+    if(favMovies[i] === "Titanic")
+        console.log("Index of Titanic is "+i);
+}
+
+favMovies.sort();
+//yes it did alter the original array
+console.log(favMovies);
+
+favMovies.pop();
+console.log(favMovies);
+
+favMovies.push("Guardians of the Galaxy");
+console.log(favMovies);
+
+favMovies.reverse();
+console.log(favMovies);
+
+let movie = favMovies.shift();
+console.log(favMovies);
+console.log(movie);
+
+let movie1 = favMovies.unshift("Shubha");
+console.log(movie1);
+console.log(favMovies);
+
+let index = favMovies.indexOf("Django Unchained");
+
+console.log(favMovies);
+favMovies.splice(index,1,"Avatar");
+console.log(favMovies);
+numSlice = Math.ceil((favMovies.length)/2);
+
+console.log(favMovies.slice(numSlice));
+console.log(favMovies);
+let indexFF = favMovies.indexOf("Fast and Furious");
+console.log("Index of Fast & Furious is: " +indexFF);
 
 ////////////////////////////////
 // Where is Waldo
