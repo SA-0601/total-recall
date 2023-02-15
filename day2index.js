@@ -123,10 +123,34 @@ console.log("Index of Fast & Furious is: " +indexFF);
 // Where is Waldo
 ////////////////////////////////
 
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+
+console.log(whereIsWaldo);
+
+whereIsWaldo.splice(1,1);
+console.log(whereIsWaldo);
+
+whereIsWaldo[1][2] = "No One";
+console.log(whereIsWaldo);
+
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
 
+let string = "Love me, pet me! HSSSSSS!"
+kittenTalkArray = ["...human...why you taking pictures of me?...", "...the catnip made me do it...","...why does the red dot always get away..."]
+
+for (let i=1; i<=20; i++){
+    if(i%2 === 0){
+        console.log((kittenTalkArray[Math.floor(Math.random()*3)]));
+    }
+    else
+    console.log(string);
+}
+
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
+
