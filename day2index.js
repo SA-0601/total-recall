@@ -132,7 +132,7 @@ console.log(whereIsWaldo);
 whereIsWaldo.splice(1,1);
 console.log(whereIsWaldo);
 
-whereIsWaldo[1][2] = "No One";
+// whereIsWaldo[1][2] = "No One";
 console.log(whereIsWaldo);
 
 ////////////////////////////////
@@ -153,4 +153,11 @@ for (let i=1; i<=20; i++){
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
+
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15];
+nums.sort();
+console.log(nums);
+let len = Math.ceil(nums.length/2);
+console.log(len);
+console.log(nums[len]);
 
