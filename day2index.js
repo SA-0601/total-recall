@@ -132,7 +132,7 @@ console.log(whereIsWaldo);
 whereIsWaldo.splice(1,1);
 console.log(whereIsWaldo);
 
-// whereIsWaldo[1][2] = "No One";
+whereIsWaldo[1][2] = "No One";
 console.log(whereIsWaldo);
 
 ////////////////////////////////
@@ -155,9 +155,68 @@ for (let i=1; i<=20; i++){
 ////////////////////////////////
 
 const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15];
+
+//for finding median, first we have to sort the array
 nums.sort();
 console.log(nums);
+//to find the middle index
 let len = Math.ceil(nums.length/2);
 console.log(len);
-console.log(nums[len]);
+    if(nums.length%2 === 0){
+        //if even elements in array then we find average of two middle elements
+         console.log((nums[len]+nums[len+1])/2);
+    }
+    else {
+        //if odd elements in array then middle number wud be median.
+        console.log(nums[len]);
+    }
 
+
+////////////////////////////////
+//  Extra Practice
+////////////////////////////////
+
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "Per Scholas hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+  
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+
+  console.log(kristynsCloset,thomsCloset);
+  kristynsShoe = kristynsCloset.shift();
+  thomsCloset[2].push(kristynsShoe);
+  console.log(kristynsCloset,thomsCloset);
+
+  console.log(`Kristyn Day 1 outfit wud be ${kristynsCloset[2]} and ${kristynsCloset[3]} with ${kristynsCloset[0]}`);
+  console.log(`Kristyn Day 2 outfit wud be ${kristynsCloset[2]} and ${kristynsCloset[3]} with ${kristynsCloset[4]}`);
+  console.log(`Kristyn Day 3 outfit wud be ${kristynsCloset[2]} and ${kristynsCloset[3]} with ${kristynsCloset[5]}`);
+
+  console.log(`Thom's Day 1 outfit wud be ${thomsCloset[0][1]} and ${thomsCloset[1][0]} with ${thomsCloset[2][0]}`);
+  console.log(`Thom's Day 2 outfit wud be ${thomsCloset[0][2]} and ${thomsCloset[1][2]} with ${thomsCloset[2][1]}`);
+  console.log(`Thom's Day 3 outfit wud be ${thomsCloset[0][3]} and ${thomsCloset[1][1]} with ${thomsCloset[2][2]}`);
