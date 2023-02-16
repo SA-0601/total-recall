@@ -220,3 +220,14 @@ const kristynsCloset = [
   console.log(`Thom's Day 1 outfit wud be ${thomsCloset[0][1]} and ${thomsCloset[1][0]} with ${thomsCloset[2][0]}`);
   console.log(`Thom's Day 2 outfit wud be ${thomsCloset[0][2]} and ${thomsCloset[1][2]} with ${thomsCloset[2][1]}`);
   console.log(`Thom's Day 3 outfit wud be ${thomsCloset[0][3]} and ${thomsCloset[1][1]} with ${thomsCloset[2][2]}`);
+
+  kristynsCloset.forEach(element => {
+        console.log(`WHIRR: Now washing ${element}`)
+  });
+
+  console.log(thomsCloset.length)
+  for (let i=0;i<thomsCloset.length;i++){
+    for(let j=0;j<thomsCloset[i].length;j++){
+        console.log(thomsCloset[i][j]);
+    }
+}
