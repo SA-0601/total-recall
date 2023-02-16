@@ -82,6 +82,7 @@ for(let i =0; i < 5; i++){
   }
   const gus = new Hamster('Gus');
   gus.owner = 'Timmy';
+  console.log(timmy);
   timmy.buyHamster(gus);
   
   for(let i =0; i < 15; i++){
@@ -91,3 +92,47 @@ for(let i =0; i < 5; i++){
   timmy.eat();
   timmy.exercise();
   timmy.exercise();
+
+//   console.log(Hamster);
+  console.log(timmy);
+
+  class Dinner {
+    constructor(appetizer,entree,dessert){
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+  }
+  
+  class Chef {
+    dinners = [];
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    
+    prepareDinner(appetizer,entree,dessert)
+    {
+        let dinnerOption = new Dinner(appetizer,entree,dessert);
+        this.dinners.push(dinnerOption);
+        
+        return this.dinners;
+       
+    }
+  }
+
+  const chef1 = new Chef("ChefJohn",35);
+  chef1.prepareDinner("appetizer1","entree1","dessert1");
+  chef1.prepareDinner("appetizer2","entree2","dessert2");
+  console.log(chef1);
+  console.log(`${chef1.name} is serving us today with:`);
+  console.log(chef1.dinners);
+
+  const chef2 = new Chef("ChefVikas",40);
+  chef2.prepareDinner("appetizer3","entree3","dessert3");
+  chef2.prepareDinner("appetizer4","entree4","dessert4");
+  console.log(chef2);
+
+  console.log(`${chef2.name} is serving us today with:`);
+  console.log(chef2.dinners);
+  
